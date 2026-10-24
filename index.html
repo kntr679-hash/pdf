@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF 全画面プレビュー</title>
+  <style>
+    /* ブラウザ標準の余白やスクロールバーを消す */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; /* 画面自体のスクロールを防ぐ */
+    }
+
+    /* 画面全体にフィットさせる */
+    .pdf-viewer {
+      width: 100vw;   /* 画面幅いっぱい */
+      height: 100vh;  /* 画面高さいっぱい */
+      border: none;   /* 枠線を消す */
+      display: block; /* 隙間を無くす */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- srcの部分を表示したいPDFのパスに書き換えてください -->
+  <iframe src="sample.pdf#view=Fit" class="pdf-viewer" title="PDF全画面プレビュー"></iframe>
+
+</body>
+</html>
